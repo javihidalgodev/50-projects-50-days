@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #f6f7fb;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  font-family: sans-serif;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 3px;
+  width: 90%;
+  transform: translateY(-50%);
+  background-color: #e0e0e0;
+  z-index: -100;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #e0e0e0;
+  border-radius: 100%;
+  background-color: #fff;
+  transition: border .5s .0s;
+}
+
+.circle.active {
+  border-color: #439fdd;
+  transition: border .5s .2s;
+}
+
+.progress-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  transform: translateY(-50%);
+  background-color: #439fdd;
+  z-index: -100;
+
+  transition: width .5s;
+}
+
+button {
+  margin: 0 10px;
+  padding: .5em 1.2em;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #439fdd
+}
+
+button:hover {
+  background-color: #2f6d97;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
