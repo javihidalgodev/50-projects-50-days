@@ -1,0 +1,59 @@
+:root {
+  --search-box-width: 250px;
+  --search-btn-width: 50px
+}
+
+body {
+  margin: 0;
+  background-color: #795df5;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container form {
+  display: flex;
+  align-items: stretch;
+}
+
+input, button {
+  border: none;
+  background-color: #fafafa;
+
+  padding: 10px;
+}
+
+input {
+  width: 50px;
+  height: 50px;
+  position: relative;
+
+  outline: none;
+
+  transition: .5s;
+}
+
+input.active {
+  width: var(--search-box-width);
+}
+
+input.active + button {
+  transform: translateX(calc(var(--search-box-width) - var(--search-btn-width)));
+}
+
+button {
+  width: var(--search-btn-width);
+  height: var(--search-btn-width);
+
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .5s;
+}
