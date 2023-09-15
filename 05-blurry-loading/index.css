@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+
+  font-family: sans-serif;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+
+  background-image: url('./image.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+}
+
+.loading-text {
+  position: absolute;
+  /* animation-name: blurry;
+  animation-duration: 5s; */
+  transition: color .5s;
+}
+
+.loading-text.finish {
+  color: #00c02a;
+
+  animation-name: zoomOut;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+/* @keyframes blurry {
+  from {
+    backdrop-filter: blur(6px)
+  }
+
+  to {
+    backdrop-filter: blur(0px)
+  }  
+} */
+
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity:1
+  }
+  50% {
+    opacity:0;-webkit-transform:scale3d(.3,.3,.3);
+    transform:scale3d(.3,.3,.3)
+  }
+  to {
+    opacity:0
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity:1
+  }
+  50% {
+    opacity:0;-webkit-transform:scale3d(.3,.3,.3);
+    transform:scale3d(.3,.3,.3)
+  }
+  to {
+    opacity:0
+  }
+}
