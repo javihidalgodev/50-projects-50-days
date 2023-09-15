@@ -13,7 +13,6 @@ const load = (interval) => {
     loadingText.classList.add('finish')
   } else {
     loadingText.textContent = counter + '%'
-    console.log(2 * ((100 - counter) / 100))
     container.style.filter = `blur(${2 * ((100 - counter) / 100)}px)`
   }
 }
