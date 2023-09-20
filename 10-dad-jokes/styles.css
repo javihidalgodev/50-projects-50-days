@@ -1,0 +1,68 @@
+:root {
+  --text-color: #000;
+  --background-main-color: #1C1D21;
+  --background-card-color: #fff;
+  --button-color: #6B818C;
+  --button-hover-color: #CC2936;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--background-main-color);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.main-title {
+  margin-bottom: 60px;
+  font-size: 3rem;
+  color: var(--background-card-color);
+}
+
+.jokes-container h1, h4, button {
+  margin: 20px 0;
+}
+
+.jokes-container {
+  margin: 0 80px;
+  padding: 30px;
+  max-width: 1200px;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--background-card-color);
+  border-radius: 8px;
+}
+
+#generate-joke {
+  padding: 1rem 1.5rem;
+
+  font-size: 1.1rem;
+  color: var(--background-card-color);
+  background-color: var(--button-color);
+  border-radius: 6px;
+  box-shadow: 0 6px 10px #0000001f;
+
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  transition: .25s;
+  transform-origin: center;
+}
+
+#generate-joke:hover {
+  background-color: var(--button-hover-color);
+  transform: scale(1.05);
+}
