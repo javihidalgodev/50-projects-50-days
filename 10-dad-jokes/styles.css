@@ -23,6 +23,7 @@ body {
   margin-bottom: 60px;
   font-size: 3rem;
   color: var(--background-card-color);
+  text-align: center;
 }
 
 .jokes-container h1, h4, button {
@@ -32,9 +33,10 @@ body {
 .jokes-container {
   margin: 0 80px;
   padding: 30px;
-  max-width: 1200px;
-  width: 100%;
+  max-width: 900px;
+  width: 90%;
   
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
