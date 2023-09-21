@@ -9,18 +9,18 @@ const createDiv = (keyCodeItems) => {
   Object.entries(keyCodeItems).forEach(item => {
     const div = document.createElement('DIV')
     div.classList.add('btn')
-    
+
     const spanDescription = document.createElement('SPAN')
     spanDescription.classList.add('description')
     spanDescription.textContent = `event.${item[0]}`
-    
+
     item[1] === ' '
       ? div.innerHTML = `${spanDescription.outerHTML} Space`
       : div.innerHTML = `${spanDescription.outerHTML} ${item[1]}`
 
     fragment.append(div)
   })
-  
+
   mainContainer.replaceChildren(fragment)
 }
 
