@@ -7,8 +7,6 @@ const createDiv = (keyCodeItems) => {
   let fragment = document.createDocumentFragment()
 
   Object.entries(keyCodeItems).forEach(item => {
-    console.log(item)
-    
     const div = document.createElement('DIV')
     div.classList.add('btn')
     
