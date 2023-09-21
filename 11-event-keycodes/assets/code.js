@@ -1,5 +1,7 @@
 const mainContainer = document.querySelector('.main-container')
 const initial = document.querySelector('#initial').outerHTML
+const log = document.querySelector('small')
+let round = 0
 
 const resetBtn = document.querySelector('#reset')
 
@@ -18,10 +20,16 @@ const createDiv = (keyCodeItems) => {
       ? div.innerHTML = `${spanDescription.outerHTML} Space`
       : div.innerHTML = `${spanDescription.outerHTML} ${item[1]}`
 
-    fragment.append(div)
-  })
+      fragment.append(div)
+    })
+
+  round > 0
+    ? log.textContent += ` + ${keyCodeItems.code}`
+    : log.textContent += `Has pulsado: ${keyCodeItems.code}`
 
   mainContainer.replaceChildren(fragment)
+
+  round++
 }
 
 const printKeyCode = (e) => {
@@ -35,5 +43,6 @@ window.addEventListener('keydown', printKeyCode)
 
 resetBtn.addEventListener('click', (e) => {
   mainContainer.innerHTML = initial
+  log.textContent = ''
   resetBtn.blur()
 })

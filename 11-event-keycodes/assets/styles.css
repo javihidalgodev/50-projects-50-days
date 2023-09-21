@@ -52,6 +52,11 @@ body {
   right: 0;
 }
 
+small {
+  max-width: 60%;
+  text-align: center;
+}
+
 #reset {
   margin-top: 40px;
 
