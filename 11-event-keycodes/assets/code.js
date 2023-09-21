@@ -44,5 +44,6 @@ window.addEventListener('keydown', printKeyCode)
 resetBtn.addEventListener('click', (e) => {
   mainContainer.innerHTML = initial
   log.textContent = ''
+  round = 0
   resetBtn.blur()
 })
