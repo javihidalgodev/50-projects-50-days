@@ -39,7 +39,7 @@ const printKeyCode = (e) => {
   createDiv(keyCodeItems)
 }
 
-window.addEventListener('keydown', printKeyCode)
+window.addEventListener('keyup', printKeyCode)
 
 resetBtn.addEventListener('click', (e) => {
   mainContainer.innerHTML = initial
