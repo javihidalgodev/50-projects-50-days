@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300;500;700;900&display=swap');
+
+:root {
+  --background-main: #242424;
+  --text-main: #f2f2f2;
+  --font-main: 'Roboto Mono', sans-serif;
+
+  --twitte-hover: #1da1f2;
+  --youtube-color: #ff0000;
+  --facebook-color: #3b5998;
+
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--background-main);
+  color: var(--text-main);
+  font-family: var(--font-main);
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  cursor: default;
+}
+
+.social-card {
+  min-width: 200px;
+  width: 200px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  transition: background .5s;
+}
+
+.social-card > * {
+  margin: 10px 0;
+}
+
+.social-card__logo, .social-card__count {
+  font-size: 4rem;
+}
+
+#twitter:hover {background: var(--twitte-hover);}
+#youtube:hover {background: var(--youtube-color);}
+#facebook:hover {background: var(--facebook-color);}
+
+@media (width < 800px) {
+  .main-container {
+    flex-direction: column
+  }
+}
