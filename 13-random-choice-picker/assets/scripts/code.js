@@ -38,7 +38,6 @@ const pickRandomChoice = (e) => {
         numOfChoices.children[last].classList.remove('dynamic-list__item--active')
         const randomNumber = Math.ceil(Math.random() * numOfChoices.childElementCount)
         numOfChoices.children[randomNumber - 1].classList.add('dynamic-list__item--active')
-        console.log(numOfChoices.children[randomNumber - 1])
         last = randomNumber - 1
         round >= 30 && (
           clearInterval(interval),
