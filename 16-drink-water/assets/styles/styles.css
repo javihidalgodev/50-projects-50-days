@@ -1,0 +1,118 @@
+:root {
+  --main-bg: #242424;
+  --glass-bg: #555;
+  --glass-bg-fill: #3494e4;
+  --glass-border: 4px solid #144fc6;
+  --glass-bg-hover: #6ab3f8;
+
+  --font: 'Arial', sans-serif;
+  --main-text: #f2f2f2;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  color: var(--main-text);
+  background: var(--main-bg);
+  font-family: var(--font);
+}
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title {
+  margin: 40px 0 20px 0;
+
+  text-align: center;
+}
+
+.glass {
+  width: 60px;
+  height: 120px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  border-radius: 0 0 24px 24px;
+
+  cursor: pointer;
+
+  transition: background .25s;
+}
+
+.glass:hover, .glass.hover {
+  background: var(--glass-bg-hover);
+}
+
+.glass--dynamic {
+  width: 180px;
+  height: 360px;
+  
+  flex-direction: column;
+  
+  cursor: default;
+  overflow: hidden;
+}
+
+.glass--dynamic > div {
+  width: 100%;
+  height: 50%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  transition: height .5s;
+}
+
+.glass-dynamic__remained {
+  display: flex;
+  flex-direction: column;
+  font-size: .8rem;
+}
+.glass-dynamic__remained h1 {
+  margin: 0;
+}
+
+.glass-dynamic__achieved {
+  background: var(--glass-bg-fill);
+  overflow: hidden;
+}
+
+.drunk {
+  background: var(--glass-bg-fill);
+}
+
+.water-glasses {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.water-glasses__title {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.water-glasses__container {
+  max-width: 400px;
+  min-width: 200px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
