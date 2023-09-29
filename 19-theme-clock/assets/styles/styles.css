@@ -1,0 +1,158 @@
+:root {
+  --light: #f3f3f3;
+  --dark: #121212;
+
+  --clr-primary: #f3f3f3;
+  --clr-secondary: #121212;
+  --clr-accent: #df2222;
+
+  --font: Arial, sans-serif;
+}
+
+.darkmode {
+  --light: #f3f3f3;
+  --dark: #121212;
+  
+  --clr-primary: #121212;
+  --clr-secondary: #f3f3f3;
+  --clr-accent: #df2222;
+  
+  --font: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--clr-primary);
+  font-family: var(--font);
+}
+
+.clock-container {
+  max-width: 600px;
+  width: 400px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  
+  text-align: center;
+}
+
+.theme-btn {
+  padding: 1rem 1.2rem;
+
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  
+  cursor: pointer;
+}
+
+.theme-btn--light {
+  color: var(--clr-primary);
+  background: var(--clr-secondary);
+}
+
+.clock {
+  position: relative;
+
+  width: 300px;
+  height: 300px;
+
+  z-index: -100;
+}
+
+.clock > div {
+  border-radius: 10px;
+}
+
+.clock__center {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background: var(--clr-secondary);
+  border: 3px solid var(--clr-accent);
+  border-radius: 50%;
+
+  z-index: 100;
+}
+
+.clock__wise {
+  position: absolute;
+  width: 4px;
+
+  margin: auto;
+  bottom: 50%;
+  right: 0;
+  left: 0;
+  
+  transform-origin: bottom center;
+}
+
+.clock__wise--hours {
+  height: 75px;
+  background: var(--clr-secondary);
+}
+
+.clock__wise--minutes {
+  height: 100px;
+  background: var(--clr-secondary);
+}
+
+.clock__wise--seconds {
+  height: 140px;
+  background: var(--clr-accent);
+}
+
+.date-time-data {
+  width: 100%;
+  color: var(--clr-secondary);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.date-time-data__time {
+  font-size: clamp(2rem, 6vw, 5rem);
+}
+
+.date-time-data__date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: clamp(.9rem, 2vw, 1.5rem);
+}
+
+.date__day {
+  padding: 4px;
+
+  color: var(--light);
+  background: var(--clr-accent);
+  font-size: .8rem;
+
+  border-radius: 50%;
+}
+
+@media (width < 350px) {
+  .clock {
+    transform: scale(.7);
+  }
+}
