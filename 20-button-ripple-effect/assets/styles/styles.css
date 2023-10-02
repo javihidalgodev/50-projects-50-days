@@ -1,0 +1,65 @@
+:root {
+  --main-bg: #121212;
+  --main-text: #fdfdfd;
+
+  --btn-bg: #fc5200;
+  --btn-accent: #c04000;
+}
+
+body {
+  margin: 0;
+  
+  background: var(--main-bg);
+}
+
+.main-container {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: var(--main-text);
+  width: 100px;
+  height: 100px;
+
+  transform: translate(-50%, -50%) scale(0);
+
+  animation-name: ripple;
+  animation-fill-mode: forwards;
+  animation-duration: .5s;
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+.ripple-btn {
+  padding: 1rem 1.5rem;
+  
+  color: var(--main-text);
+  background: var(--btn-bg);
+  font-weight: bold;
+  
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  
+  transform: scale(1.3);
+  transform-origin: center center;
+
+  overflow: hidden;
+}

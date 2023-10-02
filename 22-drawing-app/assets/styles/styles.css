@@ -1,0 +1,107 @@
+:root {
+  --primary-color: #242424;
+  --secondary-color: #fdfdfd;
+
+  --font: 'Arial', sans-serif
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  
+  display: flex;
+  justify-content: center;
+  
+  font-family: var(--font);
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.canvas-container {
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+#board {
+  min-width: 300px;
+
+  background: var(--secondary-color);
+  cursor: crosshair;
+}
+
+.canvas-menu {
+  padding: 1rem 0;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.canvas-menu__button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+
+  font-size: 1rem;
+  text-align: center;
+}
+
+#line-color {
+  padding: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+.modal {
+  position: absolute;
+
+  width: fit-content;
+  height: auto;
+  padding: 40px;
+
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: rgba(36, 36, 36, 0.95);
+  border-radius: 6px;
+
+  text-align: center;
+}
+
+.dialog-button {
+  margin: 10px;
+  padding: 10px;
+
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dialog-button--ok:hover {
+  color: #fff;
+  background-color: green;
+}
+
+.dialog-button--cancel:hover {
+  color: #fff;
+  background-color: red;
+}
