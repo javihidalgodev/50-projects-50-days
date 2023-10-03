@@ -1,0 +1,80 @@
+:root {
+  --primary-color: #242424;
+  --secondary-color: #fefefe;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--secondary-color);
+}
+
+html {
+  scrollbar-gutter: stable both-edges;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  background: var(--primary-color);
+}
+
+.kinetic-loader {
+  position: relative;
+
+  width: 200px;
+  height: 200px;
+}
+
+.kinetic-loader__piece {
+  position: absolute;
+  
+  width: 0;
+  height: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+
+  border: 48px solid transparent;
+  border-bottom-color: var(--secondary-color);
+
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.kinetic-loader__piece--first {
+  transform: rotate(90deg);
+  animation-name: animate-piece-1;
+}
+
+.kinetic-loader__piece--second {
+  transform: rotate(0deg);
+  animation-name: animate-piece-2;
+}
+
+@keyframes animate-piece-1 {
+  25%, 50% {
+    transform: rotate(270deg);
+  } 75%, to {
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes animate-piece-2 {
+  25% {
+    transform: rotate(0deg);
+  }  50%,75% {
+    transform: rotate(180deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
