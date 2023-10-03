@@ -121,6 +121,10 @@ eraser.addEventListener('click', (e) => {
       btn.textContent === 'Borrar'
       ? (
         context.clearRect(0, 0, canvas.width, canvas.height),
+        lineColor = '#000000',
+        lineColorValue.value = lineColor,
+        boardColor = '#fdfdfd',
+        boardColorValue.value = '#fdfdfd',
         canvas.style.backgroundColor = boardColor,
         canvasContainer.removeChild(modal)
         ) : canvasContainer.removeChild(modal)
