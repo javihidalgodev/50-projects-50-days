@@ -1,0 +1,128 @@
+:root {
+  --primary-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;  
+}
+
+h1, p {
+  margin: 0;
+}
+
+.slides-container {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  overflow: hidden;
+}
+
+.slide-left {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+
+  transition: .5s;
+
+  z-index: 100;
+}
+
+.slide__caption {
+  width: 100%;
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  
+  color: var(--primary-color);
+  
+  transition: .5s;
+}
+
+.slide-right {
+  width: 70%;
+  transition: .5s;
+
+  transform: translateY(-300%);
+}
+
+.slide__img {
+  width: 100%;
+  height: 100vh;
+  
+  background-size: cover;
+  background-position: center;
+  
+  transition: .5s;
+}
+
+.navigation-buttons > * {
+  position: absolute;
+
+  color: #aaa;
+  background: #eee;
+  z-index: 1000;
+}
+
+.navigation-buttons > button {
+  width: 50px;
+  height: 50px;
+  
+  border: none;
+  cursor: pointer;
+  
+  opacity: .8;
+}
+
+.navigation-buttons > button:hover {
+  font-size: 1.2rem;
+  opacity: 1;
+}
+
+.navigation-buttons > span {
+  margin: 10px 15px;
+  padding: 5px 10px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 6px;
+  opacity: 0;
+
+  transition: .25s;
+}
+
+.navigation-buttons__prev {
+  right: 70%;
+  bottom: 50%;
+  border-radius: 6px 0 0 6px;
+}
+
+.navigation-buttons__prev + span {
+  left: 30%;
+  bottom: 50%;
+}
+
+.navigation-buttons__next {
+  left: 30%;
+  top: 50%;
+  border-radius: 0 6px 6px 0;
+}
+
+.navigation-buttons__next + span {
+  right: 70%;
+  top: 50%;
+}
+
+.navigation-buttons > button:hover + span {
+  opacity: .8;
+}
