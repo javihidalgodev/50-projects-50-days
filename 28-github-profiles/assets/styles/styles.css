@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300;500;700;900&display=swap');
+
+:root {
+  --primary-color: #242424;
+  --secondary-color: #fefefe;
+  --accent-color: #f50000;
+
+  font-family: 'Roboto';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.main-title {
+  font-size: clamp(1rem, 3rem, 5rem) ;
+  margin-bottom: 20px;text-align: center;
+}
+
+.search {
+  margin: 10px 0;
+}
+
+#search-box {
+  padding: 10px;
+
+  font-size: 1rem;
+  background-color: #ddd;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+}
+
+#search-box:hover, #search-box:focus {
+  background-color: var(--secondary-color);
+}
+
+.result {
+  margin: 40px 20px;
+  padding: 40px;
+  max-width: 600px;
+  min-width: 300px;
+
+  display: none;
+  justify-content: center;
+  align-items: start;
+  gap: 16px;
+
+  background-color: #555;
+  border-radius: 20px;
+  
+  box-sizing: border-box;
+}
+
+.result.no-result, .result.filled {
+  display: flex;
+}
+
+.result__img-profile {
+  position: relative;
+
+  min-width: 150px;
+  height: 150px;
+
+  background-size: cover;
+  background-position: center center;
+  border-radius: 50%;
+  border: 6px solid #121212;
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+.go-to {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: rgba(245, 0, 0, 0.5);
+  opacity: 0;
+  transition: .25s;
+}
+
+.result__img-profile:hover .go-to {
+  opacity: 1;
+}
+
+.result__user-data {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.result__user-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.result__user-repos {
+  display: flex;
+  gap: 16px 10px;
+  flex-wrap: wrap;
+}
+
+.result__repo-link {
+  padding: 3px 9px;
+  background-color: var(--primary-color);
+  transition: .25s;
+}
+
+.result__repo-link:hover {
+  background-color: rgba(245, 0, 0, 0.8);
+}
+
+@media (width < 450px) {
+  .result {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .result__user-name {
+    align-self: center
+  }
+}
