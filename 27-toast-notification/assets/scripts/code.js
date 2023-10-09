@@ -28,9 +28,9 @@ const getNotification = () => {
 
   notificationContainer.append(notification)
 
-  // setTimeout(() => {
-  //   notification.remove()
-  // }, 3000)
+  setTimeout(() => {
+    notification.remove()
+  }, 3000)
 }
 
 const getMessage = () => {

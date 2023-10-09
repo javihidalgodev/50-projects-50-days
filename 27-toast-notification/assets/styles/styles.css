@@ -46,7 +46,7 @@ body {
 
 .notification-container {
   max-width: fit-content;
-  height: 500px;
+  height: fit-content;
 
   position: absolute;
   bottom: 20px;
@@ -55,8 +55,6 @@ body {
   display: flex;
   flex-direction: column-reverse;
   gap: 10px;
-
-  box-shadow: 10px 10px 10px 10px #121212 inset, 0px 0px 0px 0px #121212 inset;
 
   overflow: hidden;
 }
