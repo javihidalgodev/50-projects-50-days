@@ -1,0 +1,96 @@
+:root {
+  --primary-color: #121212;
+  --secondary-color: #fefefe;
+  --accent-color: #d10;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.post-container {
+  min-width: 250px;
+  max-width: 300px;
+  margin: 0 20px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.post-container__title {
+  text-align: center;
+}
+
+.post-container__img-container {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+
+  cursor: pointer;
+}
+
+.post-container__img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.refresh-btn {
+  padding: 1rem 2rem;
+
+  background-color: var(--secondary-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.refresh-btn:hover {
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
+}
+
+.heart {
+  position: absolute;
+  width: 1px;
+  opacity: 0;
+
+  animation-name: like;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  transform-origin: center center;
+}
+
+@keyframes like {
+  from {
+    opacity: 0;
+  } 50% {
+    opacity: 1;
+  } to {
+    transform: scale(100);
+    opacity: 0;
+  }
+}
