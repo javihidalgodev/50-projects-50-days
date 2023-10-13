@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assetst/styles/styles.css">
+</head>
+<body>
+  <div id="pass-gen" class="pass-gen-container">
+    <h3 class="pass-gen-container__title">Password Generator</h3>
+    <div class="pass-form__ph">
+      <span id="pass"></span>
+      <button id="copy-btn" class="fa-solid fa-copy" title="Copy"></button>
+    </div>
+    <form action="#" id="pass-form" class="pass-form">
+      <span class="pass-form__item">Password Length<input type="number" name="pass-length" id="pass-length" min="10" max="30" value="20"></span>
+      <span class="pass-form__item">Include uppercase letter <input type="checkbox" name="upper-case-chbx" id="upper-case-chbx" checked></span>
+      <span class="pass-form__item">Include lowercase letter <input type="checkbox" name="lower-case-chbx" id="lower-case-chbx" checked></span>
+      <span class="pass-form__item">Include numbers <input type="checkbox" name="numbers-chbx" id="numbers-chbx" checked></span>
+      <span class="pass-form__item">Include symbols <input type="checkbox" name="symbols-chbx" id="symbols-chbx" checked></span>
+      <button id="gen-btn" class="pass-form__submit" type="submit">Generate Password</button>
+    </form>
+  </div>
+  <script src="./assetst/scripts/code.js"></script>
+</body>
+</html>

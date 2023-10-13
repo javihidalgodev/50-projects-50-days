@@ -1,0 +1,137 @@
+:root {
+  --primary-color: #121212;
+  --secondary-color: #fdfdfd;
+  --accent-color: #09d;
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body.dark {
+  --primary-color: #fdfdfd;
+  --secondary-color: #121212;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  width: 100vw;
+  height: 100vh;
+  
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+
+  font-size: 1.3rem;
+}
+
+.main-container {
+  height: 100%;
+  padding: 0 30px;
+  min-width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  text-align: center;
+}
+
+.choice-picker-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.choice-picker-container__title {
+  margin: 10px 0;
+}
+
+.choice-picker-container__option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: scale(1.5);
+}
+
+.custom-radio__input {
+  display: none;
+}
+
+.custom-radio__label {
+  position: relative;
+
+  margin-right: 16px;
+  display: block;
+  width: 40px;
+  height: 20px;
+
+  background-color: #ddd;
+  border-radius: 50px;
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+.custom-radio__label.active {
+  background-color: var(--accent-color);
+}
+
+.custom-radio__label::before {
+  content: '';
+  
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 2px;
+  
+  background-color: var(--secondary-color);
+  border-radius: 100%;
+
+  transition: .25s;
+}
+
+.custom-radio__label.active::before {
+  transform: translateX(20px);
+}
+
+button {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 40px;
+  height: 40px;
+
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+@media (min-width: 1001px) {
+  .custom-radio__label:hover {
+    background-color: var(--accent-color);
+    opacity: .8;
+  }
+
+  button:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+  }
+}

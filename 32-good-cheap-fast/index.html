@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good, Cheap, Fast</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <h2 class="main-container__title">¿Cómo quieres que sea tu proyecto?</h2>
+    <small><em>Recuerda:</em> solo puede existir una combinación de dos opciones</small>
+    <div class="choice-picker-container">
+      <div class="choice-picker-container__option">
+        <div class="custom-radio">
+          <input class="custom-radio__input" type="checkbox" value="good" id="good">
+          <label class="custom-radio__label" for="good"></label>
+        </div>
+        <p class="choice-picker-container__title">Bueno</p>
+      </div>
+      <div class="choice-picker-container__option">
+        <div class="custom-radio">
+          <input class="custom-radio__input" type="checkbox" value="cheap" id="cheap">
+          <label class="custom-radio__label" for="cheap"></label>
+        </div>
+        <p class="choice-picker-container__title">Barato</p>
+      </div>
+      <div class="choice-picker-container__option">
+        <div class="custom-radio">
+          <input class="custom-radio__input" type="checkbox" value="fast" id="fast">
+          <label class="custom-radio__label" for="fast"></label>
+        </div>
+        <p class="choice-picker-container__title">Rápido</p>
+      </div>
+    </div>
+  </div>
+  <button class="theme fa-solid fa-moon"></button>
+  <script src="./assets/scripts/code.js"></script>
+</body>
+</html>
