@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600;900&display=swap');
+
+:root {
+  --primary-color: #ddd;
+  --secondary-color: #121212;
+  --accent-color: #004c75;
+
+  font-family: Gabarito;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.notes-container {
+  width: 100%;
+
+  margin-top: 60px;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.note {
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #fff;
+}
+
+.note-header {
+  padding: 10px;
+
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+
+  background-color: var(--accent-color);
+}
+
+.note-header__btn {
+  width: 30px;
+  height: 30px;
+
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  background: none;
+}
+
+.note-header__btn.active {
+  color: var(--accent-color);
+  background-color: #fff;
+}
+
+.note-text-zone {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  width: 100%;
+  height: 100%;
+
+  font-family: inherit;
+  padding: 10px;
+  resize: none;
+
+  border: none
+}
+
+.text.active {
+  font-size: 1.1rem;
+}
+
+.add-note-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+
+  border: none;
+  border-radius: 6px;
+
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+}
+
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(36, 36, 36, .5);
+  backdrop-filter: blur(6px);
+}
+
+.modal-box {
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+  padding: 40px;
+
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background-color: #fff;
+}
+
+.modal__answer {
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: none;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+@media (width > 500px) {
+  #ok:hover {
+    background-color: #0a5;
+  }
+  
+  #no:hover {
+    background-color: #c00;
+  }
+}
