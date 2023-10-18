@@ -1,0 +1,112 @@
+:root {
+  --primary-color: #fefefe;
+  --primary-color-variant: #ddd;
+  --secondary-color: #484848;
+  --secondary-color-variant: #121212;
+
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-color);
+}
+
+body.dark {
+  --primary-color: #121212;
+  --primary-color-variant: #484848;
+  --secondary-color: #fefefe;
+  --secondary-color-variant: #ddd
+}
+
+.hoverboard-container {
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  gap: 3px;
+
+}
+
+.box {
+  height: 20px;
+
+  transition: 1.5s;
+  background-color: var(--primary-color-variant);
+}
+
+.green {
+  background-color: rgb(173, 255, 47);
+  box-shadow: rgb(173, 255, 47) 0px 0px 5px, rgb(173, 255, 47) 0px 0px 15px;
+  transition: none;
+}
+
+.blue {
+  background-color: rgb(0, 255, 255);
+  box-shadow: rgb(0, 255, 255) 0px 0px 5px, rgb(0, 255, 255) 0px 0px 15px;
+  transition: none;
+}
+
+.orange {
+  background-color: rgb(255, 69, 0);
+  box-shadow: rgb(255, 69, 0) 0px 0px 5px, rgb(255, 69, 0) 0px 0px 15px;
+  transition: none;
+}
+
+.pink {
+  background-color: rgb(255, 0, 255);
+  box-shadow: rgb(255, 0, 255) 0px 0px 5px, rgb(255, 0, 255) 0px 0px 15px;
+  transition: none;
+}
+
+.theme {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 40px;
+  height: 40px;
+
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 3px solid var(--secondary-color);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.theme:active {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+@media (width < 500px) {
+  .hoverboard-container {
+    transform: scale(.7);
+  }
+}
+
+@media (hover: hover) {
+  .box:hover {
+    transition: none;
+  }
+
+  .theme:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+  }
+}
