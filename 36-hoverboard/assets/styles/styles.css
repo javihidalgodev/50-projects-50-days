@@ -22,6 +22,7 @@ body {
   align-items: center;
 
   background-color: var(--primary-color);
+  overflow: hidden;
 }
 
 body.dark {
@@ -41,7 +42,7 @@ body.dark {
 .box {
   height: 20px;
 
-  transition: 1.5s;
+  transition: 15s;
   background-color: var(--primary-color-variant);
 }
 
