@@ -7,6 +7,10 @@
 
 }
 
+html, body {
+  touch-action: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -42,7 +46,7 @@ body.dark {
 .box {
   height: 20px;
 
-  transition: 15s;
+  transition: 1.5s;
   background-color: var(--primary-color-variant);
 }
 
