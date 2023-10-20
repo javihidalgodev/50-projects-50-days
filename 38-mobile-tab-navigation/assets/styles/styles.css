@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #eee;
+  --secondary-color: #222;
+  --accent-color: #f81;
+
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+
+  background-color: var(--secondary-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.dark {
+  --primary-color: #121212;
+  --primary-color-variant: #484848;
+  --secondary-color: #fefefe;
+  --secondary-color-variant: #ddd
+}
+
+.mobile-container {
+  position: relative;
+  width: 300px;
+  min-width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.mobile-content {
+  position: relative;
+  width: 100%;
+  height: 500px;
+
+}
+
+.mobile-content__section {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover; 
+  
+  transition: .5s;
+}
+
+.mobile-content__section.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+.mobile-tabs {
+  padding: 0 10px;
+  width: 100%;
+
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+
+  font-size: .8rem;
+  color: var(--secondary-color);
+  list-style-type: none;
+}
+
+nav {
+  width: 100%;
+}
+
+.mobile-tab__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+
+  cursor: pointer;
+}
+
+.mobile-tab__link {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.mobile-tab__item:active,
+.mobile-tab__item:active .mobile-tab__link {
+  color: #f81;
+}
+
+.theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 3px solid var(--secondary-color);
+  border-radius: 50%;
+  z-index: 1000;
+
+  cursor: pointer;
+  transition: .25s;
+}
+
+.theme:active {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+@media (hover: hover) {
+  .mobile-tab__item:hover,
+  .mobile-tab__item:hover .mobile-tab__link {
+  color: #f81;
+  }
+
+  .theme:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+  }
+}

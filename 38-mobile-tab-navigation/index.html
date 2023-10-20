@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Tab Navigation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+  <div class="mobile-container">
+    <button class="theme fa-solid fa-moon"></button>
+    <div class="mobile-content">
+      <section id="home" class="mobile-content__section active" style="background-image: url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80');"></section>
+      <section id="work" class="mobile-content__section" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');"></section>
+      <section id="blog" class="mobile-content__section" style="background-image: url('https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80');"></section>
+      <section id="about-us" class="mobile-content__section" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80');"></section>
+    </div>
+    <nav>
+      <ul class="mobile-tabs">
+        <li class="mobile-tab__item">
+          <i class="fa-solid fa-home"></i>
+          <a href="#home" class="mobile-tab__link">Home</a>
+        </li>
+        <li class="mobile-tab__item">
+          <i class="fa-solid fa-suitcase"></i>
+          <a href="#work" class="mobile-tab__link">Work</a>
+        </li>
+        <li class="mobile-tab__item">
+          <i class="fa-solid fa-book-open"></i>
+          <a href="#blog" class="mobile-tab__link">Blog</a>
+        </li>
+        <li class="mobile-tab__item">
+          <i class="fa-solid fa-users"></i>
+          <a href="#about-us" class="mobile-tab__link">About Us</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <script src="./assets/scripts/code.js"></script>
+</body>
+</html>
