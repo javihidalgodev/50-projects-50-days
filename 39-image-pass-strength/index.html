@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Password Strength</title>
+  <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+  <div class="login">
+    <header class="login__header">
+      <h1 class="header__title">Image Password Strength</h1>
+      <small class="header__subtitle">Escribe una password para ver el efecto</small>
+    </header>
+    <main class="login__main">
+      <form action="#" method="post" id="login-form">
+        <label class="login__label" for="email">Email:</label>
+        <input class="login__input" type="email" name="email" id="email" placeholder="Enter Email" required>
+        <label class="login__label" for="pass">Password:</label>
+        <input class="login__input" type="password" name="pass" id="pass" placeholder="Enter Password" minlength="3" maxlength="20" required>
+        <button id="submit" class="login__submit" type="submit">Submit</button>
+      </form>
+    </main>
+  </div>
+  <script src="./assets/scripts/code.js"></script>
+</body>
+</html>
