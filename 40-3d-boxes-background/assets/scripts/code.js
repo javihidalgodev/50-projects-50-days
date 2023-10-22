@@ -3,7 +3,10 @@ const puzzleBoxes = document.querySelectorAll('.puzzle__box')
 const magicBtn = document.querySelector('#magic')
 
 for (let i = 0; i < puzzleBoxes.length; i++) {
+  const puzzleSize = window.getComputedStyle(puzzleBoxes[i], '::before')
+  console.log(puzzleSize)
   puzzleBoxes[i].style.backgroundImage = `url('./assets/pictures/${i}.jpg')`
+  puzzleBoxes[i].style.height = puzzleSize.width
 }
 
 magicBtn.addEventListener('click', () => {
