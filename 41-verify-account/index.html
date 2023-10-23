@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Account</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+  <div class="verify-container">
+    <header class="verify-header">
+      <h1 class="verify-header__title">Verifica tu cuenta</h1>
+      <p class="verify-header__subtitle">Hemos enviado a persona_molona@email.com un código de seis dígitos. Por favor, revisa tu bandeja de entrada, e introduce el código a continuación para confirmar la cuenta.</p>
+    </header>
+    <main class="verify-main">
+      <form action="#" method="post" id="verify-form">
+        <input class="verify-form__code-position" type="number" name="cod-pos-1" id="cod-pos-1" min="0" max="9" required placeholder="0">
+        <input class="verify-form__code-position" type="number" name="cod-pos-2" id="cod-pos-2" min="0" max="9" required placeholder="0">
+        <input class="verify-form__code-position" type="number" name="cod-pos-3" id="cod-pos-3" min="0" max="9" required placeholder="0">
+        <input class="verify-form__code-position" type="number" name="cod-pos-4" id="cod-pos-4" min="0" max="9" required placeholder="0">
+        <input class="verify-form__code-position" type="number" name="cod-pos-5" id="cod-pos-5" min="0" max="9" required placeholder="0">
+        <input class="verify-form__code-position" type="number" name="cod-pos-6" id="cod-pos-6" min="0" max="9" required placeholder="0">
+      </form>
+    </main>
+    <footer class="verify-footer">
+      <p class="verify-footer__advertisement">Esta página es solo un diseño. Nosotros no te hemos enviado ningún correo. De hecho, no tenemos tu dirección de correo... ¿o sí?</p>
+    </footer>
+  </div>
+  <small class="notice">* Prueba a introducir '123456'</small>
+  <button class="theme fa-solid fa-moon"></button>
+  <script src="./assets/scripts/code.js"></script>
+</body>
+</html>
