@@ -1,0 +1,137 @@
+:root {
+  --primary-color: #fdfdfd;
+  --primary-color-variant: #ddd;
+  --secondary-color: #121212;
+  --secondary-color-variant: #242424;
+  --accent-color: #d03;
+  --accent-color-variant: #d25;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-color);
+}
+
+.live-user-filter {
+  margin: 0 20px;
+
+  min-width: 200px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 6px;
+  box-shadow: 2px 2px 12px 1px #12121244;
+
+  overflow: hidden;
+}
+
+.live-user-filter__header {
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--secondary-color);
+}
+
+.live-user-filter__header .text-bold {
+  margin: 0 0 6px 0;
+  color: var(--primary-color-variant);
+  font-weight: bold;
+}
+
+#search-form {
+  margin-top: 10px;
+}
+
+#search-users-box {
+  width: 100%;
+  padding: 10px;
+
+  border-radius: 999px;
+  border: none;
+  color: var(--primary-color-variant);
+  background: var(--secondary-color-variant);
+
+  cursor: default;
+}
+
+
+.live-user-filter__results {
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.loading, .no-results {
+  width: 100%;
+  padding: 20px 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+}
+
+.loading {
+  position: absolute;
+}
+
+.user {
+  padding: 20px 30px;
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.user.hidden {
+  display: none;
+}
+
+.user:not(:last-of-type) {
+  border-bottom: 1px solid var(--primary-color-variant);
+}
+
+.user__img {
+  width: 50px;
+  height: 50px;
+  
+  background-size: cover;
+  background-position: center;
+  border-radius: 999px;
+}
+
+.user__name {
+  margin: 0 0 6px 0;
+  font-weight: bold;
+}
+
+#search-users-box:active {
+  opacity: .8;
+}
+
+@media (hover: hover) {
+  #search-users-box:hover {
+    opacity: .8;
+  }
+}
