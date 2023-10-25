@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let Us Know Your Feedback</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+  <div class="feedback">
+    <h4 class="feedback__title">¿Cómo te has sentido en relación al servicio que has recibido?</h4>
+    <form action="#" id="feedback__form" class="feedback__form" method="post">
+      <div class="feedback__options">
+        <label class="feedback__option" for="unhappy" title="Descontento">
+          <input type="radio" name="feedback" id="unhappy" value="unhappy">
+          <i class="fa-regular fa-frown"></i>
+          <span>Descontento</span>
+        </label>
+        <label class="feedback__option" for="meh" title="Normal">
+          <input type="radio" name="feedback" id="meh" value="meh">
+          <i class="fa-regular fa-meh"></i>
+          <span>Normal</span>
+        </label>
+        <label class="feedback__option active" for="happy" title="Contento">
+          <input type="radio" name="feedback" id="happy" value="happy" checked>
+          <i class="fa-regular fa-smile"></i>
+          <span>Contento</span>
+        </label>
+      </div>
+      <button type="submit" class="feedback__submit-btn">Enviar respuesta</button>
+    </form>
+  </div>
+
+  <script src="./assets/scripts/code.js"></script>
+</body>
+</html>

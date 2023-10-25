@@ -1,0 +1,127 @@
+:root {
+  --primary-color: #fdfdfd;
+  --primary-color--variant: #ddd;
+  --secondary-color: #121212;
+  --secondary-color--variant: #363636;
+  --accent-color: #15d;
+
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-color--variant);
+}
+
+.feedback {
+  margin: 0 20px;
+  padding: 30px;
+
+  max-width: 350px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  background-color: var(--primary-color);
+  border-radius: 6px;
+  box-shadow: 2px 2px 12px 2px  #0004;
+}
+
+.feedback__title {
+  margin: 0;
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.feedback__options {
+  display: flex;
+  gap: 6px;
+}
+
+.feedback__options input[type=radio] {
+  display: none;
+}
+
+.feedback__option {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  
+  border: 1px solid var(--primary-color--variant);
+  
+}
+
+.feedback__option.active {
+  background-color: var(--primary-color--variant);
+}
+
+.feedback__option > i {
+  font-size: 1.3rem;
+}
+
+.feedback__option > span {
+  font-size: .65rem;
+}
+
+.feedback__option[for=unhappy].active {
+  color: #d11;
+}
+.feedback__option[for=meh].active {
+  color: var(--accent-color);
+}
+.feedback__option[for=happy].active {
+  color: #1b5;
+}
+
+.feedback__submit-btn {
+  padding: 10px 16px;
+
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 6px;
+}
+
+.feedback__submit-btn:active {
+  background-color: var(--secondary-color--variant);
+}
+
+.feedback__system-answer {
+  text-align: center;
+}
+
+@media (hover: hover) {
+  .feedback__option:hover {
+    background-color: var(--primary-color--variant);
+  }
+
+  .feedback__submit-btn:hover {
+    background-color: var(--secondary-color--variant);
+  }
+}
