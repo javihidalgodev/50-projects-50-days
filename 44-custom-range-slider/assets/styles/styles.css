@@ -1,0 +1,136 @@
+:root {
+  --primary-color: #fdfdfd;
+  --secondary-color: #121212;
+  --accent-color: #f42;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+body.dark {
+  --primary-color: #121212;
+  --secondary-color: #fdfdfd;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: max-content;
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container__title {
+  margin-bottom: 40px;
+}
+
+.range-slider {
+  position: relative;
+}
+
+.range-slider__range {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+}
+
+.range-slider__range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 16px;
+  background: var(--accent-color);
+  border-radius: 999px;
+}
+.range-slider__range::-webkit-slider-thumb {
+  border: 2px solid var(--accent-color);
+  height: 16px;
+  width: 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  -webkit-appearance: none;
+}
+
+.range-slider__range::-moz-range-track {
+  width: 100%;
+  height: 16px;
+  background: var(--accent-color);
+  border-radius: 999px;
+}
+.range-slider__range::-moz-range-thumb {
+  border: 2px solid var(--accent-color);
+  height: 16px;
+  width: 16px;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+.range-slider__popover {
+  position: absolute;
+  padding: 4px 10px;
+  
+  width: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #121212;
+  background-color: #eee;
+  border-radius: 6px;
+  text-align: center;
+  transition: background-color .2s;
+}
+
+.range-slider__range:active + .range-slider__popover {
+  color: #fdfdfd;
+  background-color: var(--accent-color);
+}
+
+.theme {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 40px;
+  height: 40px;
+
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 3px solid var(--secondary-color);
+  border-radius: 50%;
+  z-index: 1000;
+
+  cursor: pointer;
+  transition: .25s;
+}
+
+.theme:active {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+@media (hover: hover) {
+  .range-slider__range:hover + .range-slider__popover {
+    color: #fdfdfd;
+    background-color: var(--accent-color);
+  }
+  .theme:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+  }
+}
