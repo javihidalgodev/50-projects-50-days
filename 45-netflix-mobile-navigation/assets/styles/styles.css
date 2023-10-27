@@ -1,0 +1,183 @@
+:root {
+  --primary-color: #fdfdfd;
+  --secondary-color: #121212;
+  --accent-color: #e50914;
+
+  font-family: Arial, Helvetica, sans-serif;
+  --netflix-logo: 'https://imgs.search.brave.com/iMK0bpQOHFE9qAS6J2UI9mfJ97x8nhrepANtIF_PSds/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M1Mjku/cG5n'
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  background-color: var(--primary-color);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+nav {
+  position: fixed;
+  font-size: .9rem;
+}
+
+
+#logo {
+  width: 200px;
+}
+
+.navbar__layer {
+  position: fixed;
+  height: 100vh;
+  transition: .5s;
+}
+
+#mn-layer.active {
+  transition: .5s .5s;
+}
+
+#st-layer {
+  width: 90vw;
+  background-color: var(--secondary-color);
+  z-index: -1000;
+  transition: .5s .5s;
+}
+
+#st-layer.active {
+  transition: .5s;
+}
+
+#nd-layer {
+  width: 85vw;
+  background-color: var(--accent-color);
+  z-index: -100;
+  transition: .5s .25s;
+}
+
+.navbar__list {
+  width: 80vw;
+  padding: 20px 40px;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  z-index: 10;
+}
+
+.navbar__logo {
+  align-self: center;
+
+}
+
+.navbar__logo img {
+  width: 100%;
+}
+
+.navbar__link {
+  width: fit-content;
+  padding: 3px 6px;
+
+  border-radius: 3px;
+  cursor: default;
+}
+
+.navbar__link:active {
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+}
+
+.navbar__droppable-menu {
+  margin: 20px 0 0 20px;
+  padding: 0;
+  
+  width: 100%;
+  
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  
+  transition: height .3s;
+}
+
+.navbar__item--droppable.active .navbar__droppable-menu {
+  display: flex;
+}
+
+.navbar__item--droppable.active > span {
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+}
+
+.navbar__btn {
+  width: 40px;
+  height: 40px;
+
+  background: none;
+  border: none;
+}
+
+#hide-menu {
+  position: absolute;
+
+  bottom: 10px;
+  right: 10px;
+
+  color: #aaa;
+}
+
+#show-menu {
+  position: absolute;
+
+  top: 10px;
+  left: 10px;
+  z-index: 0;
+}
+
+@media (width > 1000px) {
+  #mn-layer {
+    width: 30vw;
+  }
+  #mn-layer img {
+    max-width: 100px;
+  }
+
+  #nd-layer {
+    width: 32vw;
+  }
+
+  #st-layer {
+    width: 34vw;
+  }
+}
+
+@media (hover: hover) {
+  .navbar__link:hover {
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Mobile Navigation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+  </head>
+  <body>
+  <button id="show-menu" class="navbar__btn"><i class="fa-solid fa-bars fa-xl"></i></button>
+  <nav class="navbar">
+    <div id="st-layer" class="navbar__layer active"></div>
+    <div id="nd-layer" class="navbar__layer active"></div>
+    <ul id="mn-layer" class="navbar__list navbar__layer active">
+      <button id="hide-menu" class="navbar__btn"><i-fa class="fa-solid fa-xmark fa-2xl"></i-fa></button>
+      <li class="navbar__item navbar__logo">
+        <a href="#" class="navbar__link">
+          <img src="https://imgs.search.brave.com/iMK0bpQOHFE9qAS6J2UI9mfJ97x8nhrepANtIF_PSds/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M1Mjku/cG5n" alt="Netflix logo">
+        </a>
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link">TEAMS</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link">LOCATIONS</a>
+      </li>
+      <li class="navbar__item navbar__item--droppable">
+        <span class="navbar__link">LIFE AT NETFLIX <i class="fa fa-chevron-down fa-xs"></i></span>
+        <ul class="navbar__list navbar__droppable-menu">
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">NETFLIX CULTURE MEMO</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">WORK LIFE BALANCE</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">INCLUSION & DIVERSITY</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">BLOG</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <img src="https://imgs.search.brave.com/iMK0bpQOHFE9qAS6J2UI9mfJ97x8nhrepANtIF_PSds/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M1Mjku/cG5n" alt="Netflix logo" id="logo">
+    <p><b>MOBILE NAVIGATION</b></p>
+  </main>
+  <script src="./assets/scripts/code.js"></script>
+</body>
+</html>
