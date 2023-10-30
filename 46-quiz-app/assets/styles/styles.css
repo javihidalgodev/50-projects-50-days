@@ -29,6 +29,13 @@ body {
   background-color: var(--primary-color-variant);
 }
 
+body.dark {
+  --primary-color: #121212;
+  --primary-color-variant: #333;
+  --secondary-color: #fdfdfd;
+  --secondary-color-variant: #ccc
+}
+
 .q-card {
   width: 400px;
   max-width: 90%;
@@ -96,8 +103,38 @@ body {
   font-weight: bold;
 }
 
+.theme {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 40px;
+  height: 40px;
+
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 3px solid var(--secondary-color);
+  border-radius: 50%;
+  z-index: 1000;
+
+  cursor: pointer;
+  transition: .25s;
+}
+
+.theme:active {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
 @media (hover: hover) {
   .q-card__submit-btn:hover {
     background-color: var(--accent-color-variant);
+  }
+  .theme:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
   }
 }

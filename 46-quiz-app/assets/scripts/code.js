@@ -95,4 +95,15 @@ function reset () {
   createQuestion()
 }
 
+const theme = document.querySelector('.theme')
+theme.addEventListener('click', changeTheme)
+
+function changeTheme () {
+  document.body.classList.toggle('dark')
+
+  theme.classList.contains('fa-moon')
+    ? theme.classList.replace('fa-moon', 'fa-lightbulb')
+    : theme.classList.replace('fa-lightbulb', 'fa-moon')
+}
+
 getQuestions()
