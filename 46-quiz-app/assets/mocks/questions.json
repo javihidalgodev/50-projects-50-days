@@ -1,0 +1,92 @@
+[
+  {
+    "pregunta": "¿Cuál es el verdadero nombre de Batman?",
+    "respuestas": [
+      {"texto": "Bruce Wayne", "correcta": true},
+      {"texto": "Clark Kent", "correcta": false},
+      {"texto": "Peter Parker", "correcta": false},
+      {"texto": "Tony Stark", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Quién es el archienemigo de Batman?",
+    "respuestas": [
+      {"texto": "El Joker", "correcta": true},
+      {"texto": "Lex Luthor", "correcta": false},
+      {"texto": "Doctor Octopus", "correcta": false},
+      {"texto": "Mujer Maravilla", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Dónde se encuentra la Batcueva?",
+    "respuestas": [
+      {"texto": "Gotham City", "correcta": true},
+      {"texto": "Metropolis", "correcta": false},
+      {"texto": "Central City", "correcta": false},
+      {"texto": "Ciudad Gótica", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Cuál es el vehículo característico de Batman?",
+    "respuestas": [
+      {"texto": "Batmóvil", "correcta": true},
+      {"texto": "Batibote", "correcta": false},
+      {"texto": "Batihelicóptero", "correcta": false},
+      {"texto": "Batibicicleta", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Qué actor interpretó a Batman en la trilogía de Christopher Nolan?",
+    "respuestas": [
+      {"texto": "Christian Bale", "correcta": true},
+      {"texto": "George Clooney", "correcta": false},
+      {"texto": "Val Kilmer", "correcta": false},
+      {"texto": "Ben Affleck", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Cuál es el nombre del fiel mayordomo de Batman?",
+    "respuestas": [
+      {"texto": "Alfred Pennyworth", "correcta": true},
+      {"texto": "Lucius Fox", "correcta": false},
+      {"texto": "Jim Gordon", "correcta": false},
+      {"texto": "Harvey Dent", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Cuál es el símbolo distintivo de Batman en su pecho?",
+    "respuestas": [
+      {"texto": "Murciélago", "correcta": true},
+      {"texto": "Araña", "correcta": false},
+      {"texto": "Rayo", "correcta": false},
+      {"texto": "Estrella", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Quién creó a Batman en los cómics?",
+    "respuestas": [
+      {"texto": "Bob Kane", "correcta": true},
+      {"texto": "Stan Lee", "correcta": false},
+      {"texto": "Jerry Siegel", "correcta": false},
+      {"texto": "Joe Shuster", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Cuando se celebra el día internacional de Batman?",
+    "respuestas": [
+      {"texto": "16 de septiembre", "correcta": true},
+      {"texto": "18 de octubre", "correcta": false},
+      {"texto": "25 de diciembre", "correcta": false},
+      {"texto": "2 febrero", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Qué frase caracteriza a Batman?",
+    "respuestas": [
+      {"texto": "Soy Batman", "correcta": true},
+      {"texto": "Con gran poder viene una gran responsabilidad", "correcta": false},
+      {"texto": "Verdad, justicia y el estilo americano", "correcta": false},
+      {"texto": "Un gran poder conlleva una gran responsabilidad", "correcta": false}
+    ]
+  }
+]
