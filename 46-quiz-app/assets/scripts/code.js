@@ -11,7 +11,7 @@ submitBtn.addEventListener('click', () => {
 
 async function getQuestions () {
   try {
-    const res = await fetch('../mocks/questions.json')
+    const res = await fetch('assets/mocks/questions.json')
     const json = await res.json()
 
     json.forEach(item => questions.push(item))
