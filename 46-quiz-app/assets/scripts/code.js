@@ -11,7 +11,7 @@ submitBtn.addEventListener('click', () => {
 
 async function getQuestions () {
   try {
-    const res = await fetch('http://127.0.0.1:5500/46-quiz-app/assets/mocks/questions.json')
+    const res = await fetch('https://github.com/javihidalgodev/50-projects-50-days/blob/main/46-quiz-app/assets/mocks/questions.json')
     const json = await res.json()
 
     json.forEach(item => questions.push(item))
