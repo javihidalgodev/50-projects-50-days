@@ -6,20 +6,23 @@ form.addEventListener('submit', grabTodo)
 
 function grabTodo (e) {
   e.preventDefault()
-  
+
   checkTodos()
-  
-  const newTodo = document.createElement('DIV')
-  newTodo.classList = 'todo'
-  newTodo.textContent = todoInput.value
-  
-  newTodo.addEventListener('click', actionControl)
-  newTodo.addEventListener('contextmenu', actionControl)
-  
-  todosContainer.append(newTodo)
-  
-  saveLS()
-  todoInput.value = ''
+  if(todoInput.value.trim() !== '') {
+    const newTodo = document.createElement('DIV')
+    newTodo.classList = 'todo'
+    newTodo.textContent = todoInput.value
+    
+    newTodo.addEventListener('click', actionControl)
+    newTodo.addEventListener('contextmenu', actionControl)
+    
+    todosContainer.append(newTodo)
+    
+    saveLS()
+    todoInput.value = ''
+  } else {
+    todoInput.value = ''
+  }
 }
 
 function actionControl (e) {
