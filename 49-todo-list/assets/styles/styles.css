@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap');
+
+:root {
+  --primary-color: #fdfdfd;
+  --primary-color-variant: #ddd;
+  --secondary-color: #121212;
+  --secondary-color-variant: #333;
+  --accent-color: #d50;
+  --accent-color-variant: #df8852;
+
+  font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--secondary-color);
+  background: var(--primary-color-variant);
+
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  font-size: 3rem;
+  margin: 80px 0;
+
+  color: var(--accent-color);
+  opacity: .5;
+}
+
+main {
+  margin-bottom: 40px;
+  max-width: 75%;
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.todo-form {
+  width: 100%;
+
+}
+
+.todo-input {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 1rem;
+  border: 1px solid var(--primary-color-variant);
+}
+
+.todo-input::placeholder {
+  color: var(--primary-color-variant);
+}
+
+.todo-input:active {
+  background-color: var(--primary-color-variant);
+}
+
+.todos {
+  width: 100%;
+}
+
+.todo {
+  padding: 15px;
+  color: var(--accent-color-variant);
+  font-weight: 500;
+  background-color: var(--primary-color);
+  border-top: 1px solid var(--primary-color-variant);
+  cursor: default;
+}
+
+.no-content {
+  padding: 15px;
+  color: #999;
+  background-color: #ccc;
+  border-top: 1px solid var(--primary-color-variant);
+  text-align: center;
+  cursor: default;
+}
+
+.todo:hover {
+  color: var(--accent-color);
+}
+
+.todo.complete {
+  color: #999;
+  background-color: #ccc;
+  text-decoration: line-through 2px;
+}
+
+footer {
+  text-align: center;
+  color: #999;
+}
