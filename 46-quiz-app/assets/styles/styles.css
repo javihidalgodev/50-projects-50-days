@@ -22,6 +22,7 @@ body {
   height: 100vh;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -37,6 +38,7 @@ body.dark {
 }
 
 .q-card {
+  margin-bottom: 30px;
   width: 400px;
   max-width: 90%;
   
@@ -104,19 +106,13 @@ body.dark {
 }
 
 .theme {
-  position: absolute;
-  bottom: 40px;
-  right: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto;
-
   width: 40px;
   height: 40px;
 
   color: var(--secondary-color);
   background-color: var(--primary-color);
-  border: 3px solid var(--secondary-color);
+  /* border: 1px solid var(--secondary-color); */
+  border: none;
   border-radius: 50%;
   z-index: 1000;
 
