@@ -47,7 +47,7 @@ body {
   border: none;
 }
 
-#play-btn:hover {
+#play-btn:active {
   background-color: var(--yellow-batman);
 }
 
@@ -81,7 +81,7 @@ body {
   width: 70px;
 }
 
-.villain:hover {
+.villain:active {
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
@@ -135,5 +135,15 @@ body {
 @keyframes move-banner {
   to {
     transform: translateY(0vh);
+  }
+}
+
+@media (hover: hover) {
+  #play-btn:hover {
+    background-color: var(--yellow-batman);
+  }
+  .villain:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
   }
 }
